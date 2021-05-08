@@ -1,0 +1,760 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第三节 Hadoop2.7 安装 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4.html" />
+    
+    
+    <link rel="prev" href="2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    第一节 VMware16安装 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    第二节 Centos7 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    第三节 Hadoop2.7 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    第四节  Zookeeper安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    第五节  Hbase安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    第六节 主节点安装 MySql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    第七节 主节点安装 Hive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    第八节 flume安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    第九节 kafka安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    第十节 scala安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    第十一节spark安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第三节 Hadoop2.7 安装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>[toc]</p>
+<h4 id="step1-&#x914D;&#x7F6E;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;">Step1: &#x914D;&#x7F6E;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;</h4>
+<p>&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x684C;&#x9762;&#x73AF;&#x5883;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x4E2D;Centos&#x7684;&#x7EC8;&#x7AEF;&#x76F8;&#x5BF9;&#x7B80;&#x964B;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x5BBF;&#x4E3B;&#x673A;&#x7EC8;&#x7AEF;&#x901A;&#x8FC7;SSH&#x767B;&#x5F55;Centos&#x5373;&#x53EF;.&#xFF08;&#x4E3B;&#x673A;&#x7CFB;&#x7EDF;&#x4E3A;Ubuntu &#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x5176;&#x4ED6;&#x7684;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x5DE5;&#x5177;&#xFF09;</p>
+<ul>
+<li><p>&#x5C06;&#x670D;&#x52A1;&#x5668;IP&#x8BBE;&#x4E3A;&#x9759;&#x6001;</p>
+<p>&#x6253;&#x5F00;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-bas">sudo  vi /etc/sysconfig/network-scripts/ifcfg-ens33
+</code></pre>
+<p>&#x7528;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5C06;&#x6CE8;&#x91CA;&#x5185;&#x5BB9;&#x66F4;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x76F8;&#x5E94;&#x7684;&#x3002;</p>
+<pre><code class="lang-bash">TYPE=<span class="hljs-string">&quot;Ethernet&quot;</span>
+BOOTPROTO=<span class="hljs-string">&quot;static&quot;</span>
+DEVICE=<span class="hljs-string">&quot;ens33&quot;</span>
+ONBOOT=<span class="hljs-string">&quot;yes&quot;</span>
+IPADDR=192.168.200.101   <span class="hljs-comment">#IP</span>
+NETMASK=255.255.255.0   <span class="hljs-comment">#&#x5B50;&#x7F51;&#x63A9;&#x7801;</span>
+GATEWAY=192.168.200.2   <span class="hljs-comment">#&#x7F51;&#x5173;</span>
+DNS1=114.114.114.114
+</code></pre>
+<p>&#x91CD;&#x542F;&#x7F51;&#x7EDC;</p>
+<pre><code class="lang-bash">sudo service network restart
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x5728;&#x5BBF;&#x4E3B;&#x673A;hosts&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x670D;&#x52A1;&#x5668;&#x7684;&#x57DF;&#x540D;&#x6620;&#x5C04;.</p>
+<pre><code class="lang-bash">  sudo gedit /etc/hosts
+</code></pre>
+<p>  <img src="http://image.shimmer.org.cn/image-20210505210201159.png" alt=""></p>
+</li>
+<li><p>&#x6D4B;&#x8BD5;SSH&#x767B;&#x5F55;</p>
+<pre><code class="lang-bash">  sudo ssh hadoop14
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210505210240332.png" alt="image-20210505210240332"></p>
+</li>
+<li><p>&#x66F4;&#x6539;&#x4E3B;&#x673A;&#x540D;</p>
+<pre><code class="lang-bash">sudo vi /etc/hostname <span class="hljs-comment"># &#x4FEE;&#x6539;&#x4E3A;master</span>
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210505223717010.png" alt="image-20210505223717010"></p>
+</li>
+</ul>
+<h4 id="step2-&#x5B89;&#x88C5;jdk">Step2: &#x5B89;&#x88C5;JDK</h4>
+<ul>
+<li><p>Hadoop&#x652F;&#x6301;Openjdk &#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x7528;&#x4F7F;&#x7528;&#x547D;&#x4EE4; &#x5B89;&#x88C5;openjdk7&#xFF0C;&#x66FF;&#x4EE3;Oracle JDK&#x3002;</p>
+<pre><code class="lang-bash">  su -c <span class="hljs-string">&quot;yum install java-1.7.0-openjdk&quot;</span>
+</code></pre>
+</li>
+<li><p>&#x67E5;&#x770B;Java&#x7248;&#x672C;</p>
+<pre><code class="lang-bash">java -version
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210505211303880.png" alt="image-20210505211303880"></p>
+</li>
+<li><p>&#x914D;&#x7F6E;Java&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-bash">sudo vi /etc/profile
+<span class="hljs-comment"># java</span>
+<span class="hljs-built_in">export</span> JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+</code></pre>
+</li>
+</ul>
+<h4 id="step3-&#x5B89;&#x88C5;hadoop273">Step3: &#x5B89;&#x88C5;Hadoop2.7.3</h4>
+<ul>
+<li><p>&#x65B0;&#x5EFA;&#x8D44;&#x6E90;&#x76EE;&#x5F55;</p>
+<pre><code class="lang-bash">sudo mkdir /opt/softwares   
+sudo mkdir /opt/modules
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x5B89;&#x88C5;wget</p>
+<pre><code class="lang-bash">yum install wget
+</code></pre>
+</li>
+<li><p>&#x4E0B;&#x8F7D;hadoop2.7.3 &#xFF0C;&#x901F;&#x5EA6;&#x8F83;&#x6162;</p>
+<p>&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x7F51;&#x76D8;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;&#x540E;&#xFF0C;&#x4F7F;&#x7528;scp&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;</p>
+<p>&#x94FE;&#x63A5;: <a href="https://pan.baidu.com/s/1W_S5BcghFqjwdUi0GfqeSQ" target="_blank">https://pan.baidu.com/s/1W_S5BcghFqjwdUi0GfqeSQ</a>  &#x5BC6;&#x7801;: p2ek</p>
+<pre><code class="lang-bash">wget  https://archive.apache.org/dist/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz <span class="hljs-comment">#&#x5728;&#x7EBF;&#x4E0B;&#x8F7D;</span>
+
+sudo scp -r hadoop-2.7.3.tar.gz   hadoop14:/opt/softwares/   <span class="hljs-comment">#&#x672C;&#x5730;&#x4E0A;&#x4F20;</span>
+</code></pre>
+</li>
+<li><p>&#x89E3;&#x538B;hadoop,&#x8F6C;&#x5230;hadoop&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x3002;</p>
+<pre><code class="lang-bash">tar -xvf  hadoop-2.7.3.tar.gz
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;
+&#x7531;&#x4E8E;hadoop&#x9700;&#x8981;&#x6253;&#x5F00;&#x7684;&#x7AEF;&#x53E3;&#x592A;&#x591A;&#xFF0C;&#x56E0;&#x6B64;&#x6B64;&#x5904;&#x6682;&#x65F6;&#x5173;&#x95ED;&#x4E86;&#x9632;&#x706B;&#x5899;&#x3002;&#x8981;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x5FC5;&#x987B;&#x5728;root&#x7528;&#x6237;&#x4E0B;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash">  <span class="hljs-comment">#Close the firewall</span>
+  systemctl stop firewalld.service
+  <span class="hljs-comment">#Turn off boot and self-start</span>
+  systemctl <span class="hljs-built_in">disable</span> firewalld.service
+</code></pre>
+<p>  &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x76EE;&#x5F55;</p>
+<pre><code class="lang-bash">   <span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/hadoop
+   mkdir tmp
+   mkdir -p hdfs/data hdfs/name
+</code></pre>
+</li>
+<li><p>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-bash">
+    sudo vi /etc/profile
+    <span class="hljs-built_in">export</span> JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+    <span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin
+    <span class="hljs-built_in">export</span> CLASSPATH=.:<span class="hljs-variable">$JAVA_HOME</span>/jre/lib:<span class="hljs-variable">$JAVA_HOME</span>/lib:<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar
+    <span class="hljs-built_in">export</span> HADOOP_HOME=/opt/softwares/hadoop
+    <span class="hljs-built_in">export</span> HADOOP_INSTALL=<span class="hljs-variable">$HADOOP_HOME</span>
+    <span class="hljs-built_in">export</span> HADOOP_MAPRED_HOME=<span class="hljs-variable">$HADOOP_HOME</span>
+    <span class="hljs-built_in">export</span> HADOOP_COMMON_HOME=<span class="hljs-variable">$HADOOP_HOME</span>
+    <span class="hljs-built_in">export</span> HADOOP_HDFS_HOME=<span class="hljs-variable">$HADOOP_HOME</span>
+    <span class="hljs-built_in">export</span> YARN_HOME=<span class="hljs-variable">$HADOOP_HOME</span>
+    <span class="hljs-built_in">export</span> HADOOP_COMMON_LIB_NATIVE_DIR=<span class="hljs-variable">$HADOOP_HOME</span>/lib/native
+    <span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$HADOOP_HOME</span>/sbin:<span class="hljs-variable">$HADOOP_HOME</span>/bin
+&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x521D;&#x59CB;&#x5316;&#x53D8;&#x91CF;&#x3002;
+    <span class="hljs-built_in">source</span> /etc/profile
+&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x60A8;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x4E86;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x3002;
+    <span class="hljs-built_in">echo</span> <span class="hljs-variable">$JAVA_HOME</span>
+&#x5B83;&#x5E94;&#x8BE5;&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x8F93;&#x51FA;&#x3002;
+    /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x3002;
+    <span class="hljs-built_in">echo</span> <span class="hljs-variable">$HADOOP_HOME</span>
+&#x5B83;&#x5E94;&#x8BE5;&#x663E;&#x793A;&#x4EE5;&#x4E0B;&#x8F93;&#x51FA;&#x3002;
+    /opt/softwares/hadoop
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x914D;&#x7F6E;,&#x8FDB;&#x5165;hadoop&#x76EE;&#x5F55;&#x4E0B;</p>
+<p>1 &#x4FEE;&#x6539;core-site.xml&#x6587;&#x4EF6;</p>
+<pre><code>  &lt;configuration&gt;
+   &lt;property&gt;
+     &lt;name&gt;fs.default.name&lt;/name&gt;
+     &lt;value&gt;hdfs://master:9000&lt;/value&gt;  #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;io.file.buffer.size&lt;/name&gt;
+     &lt;value&gt;131072&lt;/value&gt;
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+     &lt;value&gt;file:/home/hadoop/tmp&lt;/value&gt;   #
+     &lt;description&gt;Abase for other temporary directories.&lt;/description&gt;   
+    &lt;/property&gt;
+  &lt;/configuration&gt;
+</code></pre><p>2 &#x4FEE;&#x6539;hdfs-site.xml&#x6587;&#x4EF6;</p>
+<pre><code>  &lt;configuration&gt;
+   &lt;property&gt;
+     &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;
+     &lt;value&gt;linux-node1:9001&lt;/value&gt;
+     &lt;description&gt;# View HDFS status &lt;/description&gt; through the web interface
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt; 
+     &lt;value&gt;file:/home/hadoop/dfs/name&lt;/value&gt;  #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;  
+     &lt;value&gt;file:/home/hadoop/dfs/data&lt;/value&gt;  #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;dfs.replication&lt;/name&gt;
+     &lt;value&gt;2&lt;/value&gt;
+     &lt;description&gt;# Each Block has two backups &lt;/description&gt;
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;
+     &lt;value&gt;true&lt;/value&gt;
+   &lt;/property&gt;
+  &lt;/configuration&gt;
+</code></pre><p>3 &#x4FEE;&#x6539;mapred-site.xml (&#x91CD;&#x547D;&#x540D;mapred-site.xml.template&#x5E76;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;)
+ (&#x8FD9;&#x662F;MapReduce&#x4EFB;&#x52A1;&#x7684;&#x914D;&#x7F6E;&#x3002;&#x56E0;&#x4E3A;Hadoop 2.x&#x4F7F;&#x7528;yarn&#x6846;&#x67B6;&#x6765;&#x5B9E;&#x73B0;&#x5206;&#x5E03;&#x5F0F;&#x90E8;&#x7F72;&#xFF0C;&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x5728;mapreduce.framework.name&#x5C5E;&#x6027;&#x4E0B;&#x914D;&#x7F6E;yarn&#x3002;mapred.map.tasks&#x548C;mapred.reduce.tasks&#x5206;&#x522B;&#x662F;map&#x548C;reduce&#x7684;&#x4EFB;&#x52A1;&#x6570;&#x3002;)</p>
+<pre><code class="lang-bash"> mv mapred-site.xml.template mapred-site.xml
+</code></pre>
+<pre><code>  &lt;configuration&gt;
+   &lt;property&gt;
+     &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+     &lt;value&gt;yarn&lt;/value&gt;
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;
+     &lt;value&gt;master:10020&lt;/value&gt;  #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;
+     &lt;value&gt;master:19888&lt;/value&gt;   #
+   &lt;/property&gt;
+  &lt;/configuration&gt;
+</code></pre><p>4 &#x914D;&#x7F6E;&#x8282;&#x70B9;yarn-site.xml</p>
+<pre><code>  &lt;configuration&gt;
+   &lt;!-- Site specific YARN configuration properties --&gt;
+   &lt;property&gt;
+     &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+     &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/name&gt;
+     &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;
+     &lt;value&gt;master:8032&lt;/value&gt;    #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;yarn.resourcemanager.scheduler.address&lt;/name&gt;
+     &lt;value&gt;master:8030&lt;/value&gt;   #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;/name&gt;
+     &lt;value&gt;master:8031&lt;/value&gt;   #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;yarn.resourcemanager.admin.address&lt;/name&gt;
+     &lt;value&gt;master:8033&lt;/value&gt;   #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt;
+     &lt;value&gt;master:8088&lt;/value&gt;   #
+   &lt;/property&gt;
+   &lt;property&gt;
+     &lt;name&gt;yarn.nodemanager.resource.memory-mb&lt;/name&gt;
+     &lt;value&gt;8192&lt;/value&gt;
+   &lt;/property&gt;
+  &lt;/configuration&gt;
+</code></pre><p>5 &#x914D;&#x7F6E;hadoop&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-bash">  [root@master ~]$   vi /etc/profile
+  <span class="hljs-comment">#Replace the previously modified java environment variable.</span>
+  <span class="hljs-built_in">export</span> JAVA_HOME=java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+  <span class="hljs-built_in">export</span> CLASSPATH=.:<span class="hljs-variable">$JAVA_HOME</span>/jre/lib/rt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/dt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar
+  <span class="hljs-built_in">export</span> HADOOP_HOME=/usr/<span class="hljs-built_in">local</span>/hadoop
+  <span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$HADOOP_HOME</span>/bin:<span class="hljs-variable">$HADOOP_HOME</span>/sbin
+</code></pre>
+<pre><code class="lang-bash">  [hadoop@master ~]$   vi ~/.bashrc
+  <span class="hljs-built_in">export</span> JAVA_HOME=java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+  <span class="hljs-built_in">export</span> CLASSPATH=.:<span class="hljs-variable">$JAVA_HOME</span>/jre/lib/rt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/dt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar
+  <span class="hljs-built_in">export</span> HADOOP_HOME=/usr/<span class="hljs-built_in">local</span>/hadoop
+  <span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$HADOOP_HOME</span>/bin:<span class="hljs-variable">$HADOOP_HOME</span>/sbin
+</code></pre>
+</li>
+</ul>
+<h4 id="step4&#x514B;&#x9686;&#x865A;&#x62DF;&#x673A;">Step4:&#x514B;&#x9686;&#x865A;&#x62DF;&#x673A;</h4>
+<ul>
+<li><p>&#x514B;&#x9686;Hadoop02&#xFF0C;Hadoop03&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x5173;&#x95ED;&#x865A;&#x62DF;&#x673A;master&#xFF0C;&#x7136;&#x540E;&#x5728;VMware&#x5DE6;&#x4FA7;&#x7684;&#x865A;&#x62DF;&#x673A;&#x5217;&#x8868;&#x4E2D;&#x53F3;&#x952E;&#x5355;&#x51FB;&#x3010;Hadoop01&#x3011;&#xFF0C;&#x9009;&#x62E9;&#x3010;Manager&#x3011;-&gt;&#x3010;Clone&#x3011;</p>
+</li>
+</ul>
+<p><img src="http://image.shimmer.org.cn/image-20210506213059244.png" alt="image-20210506213059244"> </p>
+<p>&#x70B9;&#x51FB;&#x4E0B;&#x4E00;&#x6B65;,&#x5728;Clone Type&#x5904;&#x9009;&#x62E9;Create a full clone</p>
+<p><img src="http://image.shimmer.org.cn/image-20210506213229331.png" alt="image-20210506213229331"></p>
+<p>&#x4FEE;&#x6539;&#x865A;&#x62DF;&#x673A;&#x540D;&#x79F0;&#x4E0E;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x70B9;&#x51FB;&#x5B8C;&#x6210;&#xFF0C;&#x7B49;&#x5F85;&#x514B;&#x9686;&#x5B8C;&#x6210;</p>
+<p><img src="http://image.shimmer.org.cn/image-20210506213538939.png" alt="image-20210506213538939"> </p>
+<p>&#x514B;&#x9686;Hadoop03&#x7684;&#x6B65;&#x9AA4;&#x540C;&#x4E0A;</p>
+<ul>
+<li><p>&#x4FEE;&#x6539;&#x8282;&#x70B9;&#x4E3B;&#x673A;&#x540D;</p>
+<p>&#x9996;&#x5148;&#x4FEE;&#x6539;Hadoop02&#x548C;Hadoop03&#x7684;&#x4E3B;&#x673A;&#x540D;&#xFF08;&#x4ED6;&#x4EEC;&#x76EE;&#x524D;&#x90FD;&#x662F;master&#xFF09;</p>
+<pre><code class="lang-bash"> vi /etc/hostnames
+ <span class="hljs-comment"># Hadoop02&#x4FEE;&#x6539;&#x4E3A;slave1</span>
+ <span class="hljs-comment"># Hadoop03&#x4FEE;&#x6539;&#x4E3A;slave2</span>
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210506213818091.png" alt="image-20210506213818091"></p>
+</li>
+<li><p>&#x4FEE;&#x6539;IP</p>
+<pre><code class="lang-bash">  sudo  vi /etc/sysconfig/network-scripts/ifcfg-ens33
+  <span class="hljs-comment"># &#x4FEE;&#x6539;Hadoop02&#x7684;IP&#x4E3A;192.168.200.102</span>
+  <span class="hljs-comment"># &#x4FEE;&#x6539;Hadoop03&#x7684;IP&#x4E3A;192.168.200.103</span>
+  sudo service network restart <span class="hljs-comment">#&#x91CD;&#x542F;&#x7F51;&#x7EDC;</span>
+</code></pre>
+<p>  <img src="http://image.shimmer.org.cn/image-20210506214147981.png" alt="image-20210506214147981"></p>
+</li>
+</ul>
+<ul>
+<li><p>&#x6DFB;&#x52A0;&#x57DF;&#x540D;&#x89E3;&#x6790;</p>
+<pre><code class="lang-bash">&#x5206;&#x522B;&#x4FEE;&#x6539;Hadoop01,Hadoop02,Hadoop03,&#x53CA;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x57DF;&#x540D;&#x6620;&#x5C04;&#x6587;&#x4EF6;
+sudo vi /etc/hosts
+<span class="hljs-comment"># &#x5728;host&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x8FFD;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</span>
+
+<span class="hljs-comment"># 192.168.200.101 master</span>
+
+<span class="hljs-comment"># 192.168.200.102 slave1</span>
+
+<span class="hljs-comment"># 192.168.200.103 slave2</span>
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210506220314774.png" alt="image-20210506220314774"></p>
+</li>
+</ul>
+<ul>
+<li><p>&#x5728;&#x5404;&#x8282;&#x70B9;&#x4F7F;&#x7528;ping&#x547D;&#x4EE4;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF1A;</p>
+<pre><code class="lang-bash">ping master
+ping slave1
+ping slave2
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210506220516744.png" alt="image-20210506220516744"></p>
+</li>
+</ul>
+<h4 id="step5&#xFF1A;&#x914D;&#x7F6E;ssh&#x514D;&#x5BC6;&#x767B;&#x5F55;">Step5&#xFF1A;&#x914D;&#x7F6E;ssh&#x514D;&#x5BC6;&#x767B;&#x5F55;</h4>
+<ul>
+<li><p>&#x751F;&#x6210;&#x5BC6;&#x94A5;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-bash">ssh-keygen -t rsa
+<span class="hljs-comment"># &#x751F;&#x6210;&#x4E2D;&#x6309;enter&#x5373;&#x53EF;</span>
+<span class="hljs-comment"># &#x5728;&#x4E09;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;</span>
+</code></pre>
+</li>
+<li><p>SSH&#x5206;&#x53D1;</p>
+<pre><code class="lang-bash">ssh-copy-id master
+ssh-copy-id slave1
+ssh-copy-id slave2
+<span class="hljs-comment"># &#x5728;&#x4E09;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x6267;&#x884C;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;</span>
+<span class="hljs-comment">#Are you sure you want to continue connecting (yes/no)? &#x9700;&#x8F93;&#x5165;yes</span>
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210506220952744.png" alt="image-20210506220952744"></p>
+</li>
+<li><p>&#x9A8C;&#x8BC1;SSH&#x767B;&#x5F55;</p>
+<pre><code class="lang-bash">ssh master
+ssh slave1
+ssh slave2
+<span class="hljs-comment">#&#x4E09;&#x53F0;&#x673A;&#x5668;&#x4E2D;&#x5206;&#x522B;&#x6267;&#x884C;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;</span>
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210506221045657.png" alt="image-20210506221045657"></p>
+</li>
+<li><p>&#x683C;&#x5F0F;&#x5316;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF1A;</p>
+</li>
+</ul>
+<pre><code class="lang-bash">hadoop namenode -format
+<span class="hljs-comment">#&#x5728;&#x7B2C;&#x4E00;&#x4F7F;&#x7528; Hadoop &#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x683C;&#x5F0F;&#x5316;</span>
+<span class="hljs-comment">#&#x5728;master&#x4E0A;,&#x6267;&#x884C;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;</span>
+<span class="hljs-comment">#&#x663E;&#x793A; tmp/dfs/name has been successfully formatted </span>
+<span class="hljs-comment">#&#x53CA;Exiting with status 0 &#x8868;&#x660E;&#x683C;&#x5F0F;&#x5316;&#x6210;&#x529F;</span>
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210507142357281.png" alt="image-20210507142357281"> </p>
+<h4 id="step6&#xFF1A;-&#x542F;&#x52A8;hadoop">Step6&#xFF1A; &#x542F;&#x52A8;Hadoop</h4>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x5728;master&#x4E0A;&#x6267;&#x884C;</span>
+<span class="hljs-built_in">cd</span> /usr/app/hadoop-2.7.3/sbin/
+./start-all.sh
+</code></pre>
+<ul>
+<li><p>jps&#x67E5;&#x770B;&#x5404;&#x8282;&#x70B9;&#x542F;&#x52A8;&#x8FDB;&#x7A0B;</p>
+<p>  <img src="http://image.shimmer.org.cn/image-20210507160031766.png" alt="image-20210507160031766"> </p>
+<p>  <img src="http://image.shimmer.org.cn/image-20210507150351988.png" alt="image-20210507150351988"></p>
+<p>  <img src="http://image.shimmer.org.cn/image-20210507150409026.png" alt="image-20210507150409026"> </p>
+</li>
+</ul>
+<h4 id="step7&#xFF1A;-&#x96C6;&#x7FA4;web">Step7&#xFF1A; &#x96C6;&#x7FA4;web</h4>
+<pre><code class="lang-bash">Hadoop&#x96C6;&#x7FA4;&#x542F;&#x52A8;&#x5E76;&#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;web-ui&#x8FDB;&#x884C;&#x96C6;&#x7FA4;&#x67E5;&#x770B;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x8FF0;&#xFF1A;
+&#x7136;&#x540E;&#x672C;&#x673A;&#x8BBF;&#x95EE;http://(Hadoop01  IP):50070 <span class="hljs-comment">#hdfs</span>
+http://(Hadoop01  IP):8088  <span class="hljs-comment">#yarn</span>
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210507160547096.png" alt="image-20210507160547096"></p>
+<p><img src="http://image.shimmer.org.cn/image-20210507193430132.png" alt="image-20210507193430132"> </p>
+<h4 id="step8&#xFF1A;&#x9A8C;&#x8BC1;">Step8&#xFF1A;&#x9A8C;&#x8BC1;</h4>
+<ul>
+<li><p>&#x9A8C;&#x8BC1; HDFS HA
+&#x9996;&#x5148;&#x5411; hdfs &#x4E0A;&#x4F20;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">hadoop fs -put /etc/profile /
+hadoop fs -ls /
+</code></pre>
+<p><img src="http://image.shimmer.org.cn/image-20210507194605490.png" alt="image-20210507194605490"></p>
+<p>&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;:<a href="http://192.168.200.11:50070" target="_blank">http://192.168.200.11:50070</a></p>
+</li>
+<li><p>&#x9A8C;&#x8BC1; YARN</p>
+<p>&#x8FD0;&#x884C;&#x4E00;&#x4E0B; hadoop &#x63D0;&#x4F9B;&#x7684; demo &#x4E2D;&#x7684; WordCount &#x7A0B;&#x5E8F;:    </p>
+<pre><code class="lang-bash">  hadoop jar /usr/app/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar wordcount /profile /out
+</code></pre>
+<p>  <img src="../home/shimmer/.config/Typora/typora-user-images/image-20210507194159027.png" alt="image-20210507194159027"></p>
+</li>
+</ul>
+<p>&#x81F3;&#x6B64;&#xFF0C;hadoop&#x5B89;&#x88C5;&#x5B8C;&#x6210;
+<a href="4.html">&#x4E0B;&#x8282;Zookeeper&#x5B89;&#x88C5;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2.html" class="navigation navigation-prev " aria-label="Previous page: 第二节 Centos7 安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4.html" class="navigation navigation-next " aria-label="Next page: 第四节  Zookeeper安装">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第三节 Hadoop2.7 安装","level":"1.2.3","depth":2,"next":{"title":"第四节  Zookeeper安装","level":"1.2.4","depth":2,"path":"part1/4.md","ref":"part1/4.md","articles":[]},"previous":{"title":"第二节 Centos7 安装","level":"1.2.2","depth":2,"path":"part1/2.md","ref":"part1/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part1/3.md","mtime":"2021-05-08T04:49:16.562Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-08T02:11:46.700Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
